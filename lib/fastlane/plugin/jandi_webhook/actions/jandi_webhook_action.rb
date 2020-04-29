@@ -15,7 +15,7 @@ module Fastlane
         }
 
         message = {
-          body: "#{params[:appName]} 테스트 앱이 배포되었습니다.",
+          body: "#{params[:appName]} 테스트 앱이 배포되었습니다.\n#{params[:link]}",
           connectColor: "#ea002c",
           connectInfo: [
             {
@@ -28,7 +28,7 @@ module Fastlane
         UI.message(message.to_json)
         UI.message("#{params[:jandi_url]} for #{params[:platform]} ")
 
-        Send the request
+        #Send the request
         response = HTTParty.post(params[:jandi_url], :headers => headers, body: message.to_json)
         UI.message("response : #{response}")
       end
@@ -74,6 +74,12 @@ module Fastlane
                                   env_name: "APP_NAME",
                                 description: "app name",
                                   optional: false,
+                                      type: String),
+
+          FastlaneCore::ConfigItem.new(key: :link,
+                                  env_name: "LINK",
+                                description: "link",
+                                  optional: true,
                                       type: String)
         ]
       end

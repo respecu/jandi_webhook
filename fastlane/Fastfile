@@ -1,8 +1,10 @@
 lane :test do
   jandi_webhook(
-    jandi_url: "https://wh.jandi.com/connect-api/webhook/14143961/d404a22ee0add90e8ec3d32e8f1cfd5c",
+    # jandi_url: "https://wh.jandi.com/connect-api/webhook/14143961/d404a22ee0add90e8ec3d32e8f1cfd5c",
+    jandi_url: "https://wh.jandi.com/connect-api/webhook/21494031/c6abf0264e3b724025eefe3dad97a7ce",
     platform: "android",
     version: "1.0.0",
-    appName: "할인상점"
+    appName: "할인상점",
+    link: "https://appdistribution.firebase.dev/app_distro/projects/5e980fef7bb4bb71484477aa"
     )
 end
