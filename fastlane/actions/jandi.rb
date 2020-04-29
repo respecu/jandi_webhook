@@ -8,7 +8,8 @@ module Fastlane
       def self.run(params)
         # fastlane will take care of reading in the parameter and fetching the environment variable:
         UI.message "Parameter API Token: #{params[:api_token]}"
-
+        UI.success "Parameter API Token: ???"
+        
         # sh "shellcommand ./path"
 
         # Actions.lane_context[SharedValues::JANDI_CUSTOM_VALUE] = "my_val"
@@ -62,7 +63,7 @@ module Fastlane
 
       def self.authors
         # So no one will ever forget your contribution to fastlane :) You are awesome btw!
-        ["Your GitHub/Twitter Name"]
+        ["odddeye83@gmail.com"]
       end
 
       def self.is_supported?(platform)
@@ -75,7 +76,8 @@ module Fastlane
         #  [:ios, :mac].include?(platform)
         # 
 
-        platform == :android
+        # platform == :android
+        true
       end
     end
   end

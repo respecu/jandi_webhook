@@ -1,3 +1,8 @@
 lane :test do
-  jandi_webhook
+  jandi_webhook(
+    jandi_url: "https://wh.jandi.com/connect-api/webhook/14143961/d404a22ee0add90e8ec3d32e8f1cfd5c",
+    platform: "android",
+    version: "1.0.0",
+    appName: "할인상점"
+    )
 end
