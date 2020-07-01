@@ -19,7 +19,7 @@ module Fastlane
           connectColor: "#ea002c",
           connectInfo: [
             {
-            title: "App Tester를 확인해 주세요.",
+            title: "#{params[:deployService]}를 확인해 주세요.",
             description: "#{params[:version]} for #{params[:platform]}"
             }
           ]
@@ -79,6 +79,12 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :link,
                                   env_name: "LINK",
                                 description: "link",
+                                  optional: true,
+                                      type: String)
+          
+          FastlaneCore::ConfigItem.new(key: :deployService,
+                                  env_name: "deployService",
+                                description: "deployService",
                                   optional: true,
                                       type: String)
         ]
