@@ -80,7 +80,7 @@ module Fastlane
                                   env_name: "LINK",
                                 description: "link",
                                   optional: true,
-                                      type: String)
+                                      type: String),
           
           FastlaneCore::ConfigItem.new(key: :deployService,
                                   env_name: "deployService",
